@@ -1,0 +1,99 @@
+{
+  "login": {
+    "title": "Login",
+    "selectRole": "Select your role",
+    "roleAdmin": "Admin",
+    "roleSuperviseur": "Supervisor",
+    "roleIntermediaire": "Intermediary",
+    "address": "Address",
+    "addressPlaceholder": "Your login address",
+    "password": "Password",
+    "passwordPlaceholder": "Your password",
+    "submit": "Sign in",
+    "connecting": "Signing in…",
+    "errorInvalid": "Invalid address or password.",
+    "errorServer": "Connection error. Please try again.",
+    "footer": "© 2026 BVMT · All rights reserved"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "seances": "Sessions",
+    "positions": "Positions",
+    "risque": "Risk",
+    "contributions": "Contributions",
+    "intermediaires": "Intermediaries",
+    "historique": "History",
+    "myAlerts": "My Alerts",
+    "myMarket": "My Market"
+  },
+  "dashboard": {
+    "riskTotal": "Total Risk R",
+    "guaranteeFund": "Guarantee Fund",
+    "activeIntermed": "Active intermediaries",
+    "criticalPositions": "Risk positions",
+    "noAnomaly": "No anomaly detected",
+    "interventionRequired": "⚠ Intervention required"
+  },
+  "seance": {
+    "prepare": "Prepare session",
+    "cancel": "Cancel session",
+    "close": "Close the session",
+    "detect": "Detect anomalies",
+    "uploadFiles": "Import BVMT files — Risk calculation",
+    "fileTx": "BVMT Transactions file",
+    "fileValeurs": "Securities file (closing prices)",
+    "fileIntermediaires": "Intermediaries file",
+    "dropOrClick": "Drop or click to select",
+    "uploading": "Calculating…",
+    "uploadSuccess": "Import calculated successfully",
+    "sessionHistory": "Session history",
+    "noSession": "No sessions in database",
+    "currentSession": "Current session",
+    "noOpenSession": "No open session",
+    "openNewSession": "+ Open a new session",
+    "statut": {
+      "PREPAREE": "Prepared",
+      "OUVERTE": "Open",
+      "CLOTUREE": "Closed",
+      "ANNULEE": "Cancelled"
+    }
+  },
+  "historique": {
+    "title": "Session History",
+    "subtitle": "Data from all past sessions",
+    "date": "Date",
+    "statut": "Status",
+    "nbTransactions": "Transactions",
+    "volume": "Volume (MTND)",
+    "nbAnomalies": "Anomalies",
+    "actions": "Actions",
+    "noData": "No sessions in history"
+  },
+  "intermediaire": {
+    "myAlerts": "My Alerts",
+    "myMarketTitle": "My market situation",
+    "noAlerts": "No alerts for you",
+    "alertType": "Type",
+    "alertMessage": "Message",
+    "alertDate": "Date",
+    "position": "Position",
+    "isin": "ISIN",
+    "valeur": "Security",
+    "pnt": "NPT",
+    "pne": "NPM (TND)",
+    "risque": "Risk (TND)",
+    "noPositions": "No positions available"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "close": "Close",
+    "search": "Search…",
+    "logout": "Logout",
+    "language": "Language",
+    "backendOffline": "⚠ Server unreachable — check that Spring Boot is running on :8081"
+  }
+}

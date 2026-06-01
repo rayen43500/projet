@@ -1,0 +1,45 @@
+# Aligné avec fgm-frontend : environment.apiUrl = http://localhost:8081
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  application:
+    name: fgm-backend
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/fgm}
+  servlet:
+    multipart:
+      max-file-size: 64MB
+      max-request-size: 64MB
+  datasource:
+    url: ${BATCH_DATASOURCE_URL:jdbc:h2:mem:fgmbatch;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE}
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+
+fgm:
+  cors:
+    # Toutes les origines Angular possibles en développement
+    allowed-origins: ${FGM_CORS_ORIGINS:http://localhost:4200,http://127.0.0.1:4200,http://localhost:4201,http://localhost:3000}
+  jwt:
+    secret: ${FGM_JWT_SECRET:fgm-dev-secret-change-in-production-min-32bytes!}
+    issuer: ${FGM_JWT_ISSUER:http://localhost:8081}
+    audience: ${FGM_JWT_AUDIENCE:fgm-frontend}
+    expiration-hours: ${FGM_JWT_EXPIRATION_HOURS:12}
+  seed:
+    enabled: ${FGM_SEED_ENABLED:true}
+    # DEMO-101/102 au démarrage — false = uniquement fichier intermediaires BVMT
+    demo-intermediaires: ${FGM_SEED_DEMO_INTER:false}
+
+logging:
+  level:
+    root: INFO
+    com.fgm.gestion: INFO
+    org.springframework.security: DEBUG
+    org.springframework.web.cors: DEBUG

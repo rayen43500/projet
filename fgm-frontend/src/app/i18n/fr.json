@@ -1,0 +1,99 @@
+{
+  "login": {
+    "title": "Connexion",
+    "selectRole": "Sélectionnez votre rôle",
+    "roleAdmin": "Admin",
+    "roleSuperviseur": "Superviseur",
+    "roleIntermediaire": "Intermédiaire",
+    "address": "Adresse",
+    "addressPlaceholder": "Votre adresse de connexion",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Votre mot de passe",
+    "submit": "Se connecter",
+    "connecting": "Connexion en cours…",
+    "errorInvalid": "Adresse ou mot de passe incorrect.",
+    "errorServer": "Erreur de connexion. Veuillez réessayer.",
+    "footer": "© 2026 BVMT · Tous droits réservés"
+  },
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "seances": "Séances",
+    "positions": "Positions",
+    "risque": "Risque",
+    "contributions": "Contributions",
+    "intermediaires": "Intermédiaires",
+    "historique": "Historique",
+    "myAlerts": "Mes alertes",
+    "myMarket": "Mon marché"
+  },
+  "dashboard": {
+    "riskTotal": "Risque Total R",
+    "guaranteeFund": "Fonds de Garantie",
+    "activeIntermed": "Intermédiaires actifs",
+    "criticalPositions": "Positions à risque",
+    "noAnomaly": "Aucune anomalie détectée",
+    "interventionRequired": "⚠ Intervention requise"
+  },
+  "seance": {
+    "prepare": "Préparer séance",
+    "cancel": "Annuler séance",
+    "close": "Clôturer la séance",
+    "detect": "Détecter anomalies",
+    "uploadFiles": "Import fichiers BVMT — Calcul des risques",
+    "fileTx": "Fichier Transactions BVMT",
+    "fileValeurs": "Fichier Valeurs (cours de clôture)",
+    "fileIntermediaires": "Fichier Intermédiaires",
+    "dropOrClick": "Déposez ou cliquez pour sélectionner",
+    "uploading": "Calcul en cours…",
+    "uploadSuccess": "Import calculé avec succès",
+    "sessionHistory": "Historique des séances",
+    "noSession": "Aucune séance en base",
+    "currentSession": "Séance courante",
+    "noOpenSession": "Aucune séance ouverte",
+    "openNewSession": "+ Ouvrir une nouvelle séance",
+    "statut": {
+      "PREPAREE": "Préparée",
+      "OUVERTE": "Ouverte",
+      "CLOTUREE": "Clôturée",
+      "ANNULEE": "Annulée"
+    }
+  },
+  "historique": {
+    "title": "Historique des séances",
+    "subtitle": "Données de toutes les séances passées",
+    "date": "Date",
+    "statut": "Statut",
+    "nbTransactions": "Transactions",
+    "volume": "Volume (MTND)",
+    "nbAnomalies": "Anomalies",
+    "actions": "Actions",
+    "noData": "Aucune séance dans l'historique"
+  },
+  "intermediaire": {
+    "myAlerts": "Mes alertes",
+    "myMarketTitle": "Ma situation de marché",
+    "noAlerts": "Aucune alerte vous concernant",
+    "alertType": "Type",
+    "alertMessage": "Message",
+    "alertDate": "Date",
+    "position": "Position",
+    "isin": "ISIN",
+    "valeur": "Valeur",
+    "pnt": "PNT",
+    "pne": "PNE (TND)",
+    "risque": "Risque (TND)",
+    "noPositions": "Aucune position disponible"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "error": "Erreur",
+    "success": "Succès",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "search": "Rechercher…",
+    "logout": "Déconnexion",
+    "language": "Langue",
+    "backendOffline": "⚠ Serveur inaccessible — vérifiez que Spring Boot tourne sur :8081"
+  }
+}
