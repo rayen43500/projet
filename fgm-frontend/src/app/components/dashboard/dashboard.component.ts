@@ -223,7 +223,7 @@ declare const Chart: any;
                       <td>{{p.libelleValeur || '—'}}</td>
                       <td class="right mono" [class.val-up]="p.pnt>0" [class.val-dn]="p.pnt<0">{{p.pnt>0?'+':''}}{{p.pnt | number:'1.0-0'}}</td>
                       <td><span class="pos-tag" [class.pos-buy]="p.pnt>=0" [class.pos-sell]="p.pnt<0">{{p.pnt>=0?'▲ Acheteur':'▼ Vendeur'}}</span></td>
-                      <td class="right mono" [class.val-up]="p.pne>0" [class.val-dn]="p.pne<0">{{p.pne>0?'+':''}}{{p.pne | number:'1.0-0'}}</td>
+                      <td class="right mono" [class.val-up]="p.pne>0" [class.val-dn]="p.pne<0">{{p.pne>0?'+':''}}{{p.pne | number:'1.3-3'}}</td>
                       <td class="right mono">{{p.coursCloture | number:'1.3-3'}}</td>
                       <td class="right mono" style="font-weight:700" [style.color]="p.typeRisque!=='AUCUN'?'var(--red-raw)':'var(--navy-raw)'">{{p.risqueJ | number:'1.0-0'}}</td>
                       <td><span class="badge" [class.badge-ok]="p.typeRisque==='AUCUN'" [class.badge-danger]="p.typeRisque==='DEFAUT_TITRES'" [class.badge-warn]="p.typeRisque==='DEFAUT_ESPECES'">{{typeRisqueLabel(p.typeRisque)}}</span></td>
@@ -542,7 +542,7 @@ declare const Chart: any;
                 <td>{{p.libelleValeur || '—'}}</td>
                 <td class="right mono" [class.val-up]="p.pnt>0" [class.val-dn]="p.pnt<0">{{p.pnt>0?'+':''}}{{p.pnt | number:'1.0-0'}}</td>
                 <td><span class="pos-tag" [class.pos-buy]="p.pnt>=0" [class.pos-sell]="p.pnt<0">{{p.pnt>=0?'▲ Ach':'▼ Ven'}}</span></td>
-                <td class="right mono" [class.val-up]="p.pne>0" [class.val-dn]="p.pne<0">{{p.pne>0?'+':''}}{{p.pne | number:'1.0-0'}}</td>
+                <td class="right mono" [class.val-up]="p.pne>0" [class.val-dn]="p.pne<0">{{p.pne>0?'+':''}}{{p.pne | number:'1.3-3'}}</td>
                 <td><span class="pos-tag" [class.pos-buy]="p.pne>=0" [class.pos-sell]="p.pne<0">{{p.pne>=0?'▲ Créd':'▼ Déb'}}</span></td>
                 <td><span class="badge" [class.badge-ok]="p.typeRisque==='AUCUN'" [class.badge-danger]="p.typeRisque==='DEFAUT_TITRES'" [class.badge-warn]="p.typeRisque==='DEFAUT_ESPECES'">{{typeRisqueLabel(p.typeRisque)}}</span></td>
                 <td class="right mono">{{p.coursCloture | number:'1.3-3'}}</td>
