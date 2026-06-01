@@ -87,6 +87,9 @@ public class PositionnetteTasklet implements Tasklet {
         //  MAP VENDEUR
         Map<String, double[]> mapVendeur = new HashMap<>();
 
+        // Fallback libellé intermédiaire depuis transactions (quand le fichier intermédiaires ne contient pas le code)
+        Map<Integer, String> interLabelFromTx = new HashMap<>();
+
         for (Transaction t : transactions) {
 
             if (!t.getSeance().equals(seance)) continue;
@@ -99,6 +102,12 @@ public class PositionnetteTasklet implements Tasklet {
 
             // ACHETEUR
             if (isValidInterCode(t.getCodeIntermediaireAcheteur())) {
+                if (t.getLibelleIntermediaireAcheteur() != null && !t.getLibelleIntermediaireAcheteur().isBlank()) {
+                    interLabelFromTx.putIfAbsent(
+                            t.getCodeIntermediaireAcheteur(),
+                            t.getLibelleIntermediaireAcheteur().trim()
+                    );
+                }
 
                 String key = posKey(t.getCodeIntermediaireAcheteur(), valeur);
 
@@ -115,6 +124,12 @@ public class PositionnetteTasklet implements Tasklet {
 
             //VENDEUR
             if (isValidInterCode(t.getCodeIntermediaireVendeur())) {
+                if (t.getLibelleIntermediaireVendeur() != null && !t.getLibelleIntermediaireVendeur().isBlank()) {
+                    interLabelFromTx.putIfAbsent(
+                            t.getCodeIntermediaireVendeur(),
+                            t.getLibelleIntermediaireVendeur().trim()
+                    );
+                }
 
                 String key = posKey(t.getCodeIntermediaireVendeur(), valeur);
 
@@ -169,7 +184,7 @@ public class PositionnetteTasklet implements Tasklet {
 
             String interLabel = intermediaireLookup.resolveLibelleCourt(codeInt, seance);
             if (interLabel.isBlank()) {
-                interLabel = tLibelleFromMaps(mapAcheteur, mapVendeur, key);
+                interLabel = interLabelFromTx.getOrDefault(codeInt, tLibelleFromMaps(mapAcheteur, mapVendeur, key));
             }
 
             Positionnette p = new Positionnette();
